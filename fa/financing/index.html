@@ -1,0 +1,428 @@
+
+
+
+
+
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" data-theme-color />
+    <script>
+      /* Resolve the saved appearance before the first paint (no theme flash). */
+      (function () {
+        var pref = "system";
+        try {
+          var saved = window.localStorage.getItem("daya-theme");
+          if (saved === "light" || saved === "dark" || saved === "system") pref = saved;
+        } catch (error) {}
+        var dark = pref === "dark";
+        if (pref === "system" && window.matchMedia) {
+          dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        }
+        var root = document.documentElement;
+        root.classList.add("js");
+        root.setAttribute("data-theme", dark ? "dark" : "light");
+        root.setAttribute("data-theme-preference", pref);
+        var meta = document.querySelector("meta[data-theme-color]");
+        if (meta) meta.setAttribute("content", dark ? "#08131d" : "#ffffff");
+      })();
+    </script>
+    <title>راهکارهای نوین تأمین مالی و توکن‌سازی منافع اقتصادی | دایا تکنیکال</title>
+    <meta name="description" content="توضیح شفاف درباره ساختاردهی تأمین مالی پروژه، نقش مستندات، مفهوم توکن‌سازی منافع اقتصادی و محدودیت‌های حقوقی و مقرراتی آن." />
+    <meta name="robots" content="index,follow" />
+    <meta name="color-scheme" content="light dark" />
+    <noscript><style>.theme-toggle { display: none !important; }</style></noscript>
+
+    <link rel="canonical" href="https://YOUR-USERNAME.github.io/YOUR-REPO/fa/financing/" />
+    <link rel="alternate" hreflang="fa" href="https://YOUR-USERNAME.github.io/YOUR-REPO/fa/financing/" />
+    <link rel="alternate" hreflang="en" href="https://YOUR-USERNAME.github.io/YOUR-REPO/en/financing/" />
+    <link rel="alternate" hreflang="ar" href="https://YOUR-USERNAME.github.io/YOUR-REPO/ar/financing/" />
+    <link rel="alternate" hreflang="x-default" href="https://YOUR-USERNAME.github.io/YOUR-REPO/fa/financing/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="دایا تکنیکال" />
+    <meta property="og:title" content="راهکارهای نوین تأمین مالی و توکن‌سازی منافع اقتصادی | دایا تکنیکال" />
+    <meta property="og:description" content="توضیح شفاف درباره ساختاردهی تأمین مالی پروژه، نقش مستندات، مفهوم توکن‌سازی منافع اقتصادی و محدودیت‌های حقوقی و مقرراتی آن." />
+    <meta property="og:url" content="https://YOUR-USERNAME.github.io/YOUR-REPO/fa/financing/" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:image" content="https://YOUR-USERNAME.github.io/YOUR-REPO/static/img/og-cover.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/svg+xml" href="../../static/img/favicon.svg" />
+    <link rel="alternate icon" type="image/png" sizes="64x64" href="../../static/img/favicon.png" />
+    <link rel="stylesheet" href="../../static/fonts/fonts.css" />
+    
+    <link rel="stylesheet" href="../../static/css/site.css?v=20261024" />
+    <link rel="stylesheet" href="../../static/css/demo.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "دایا تکنیکال",
+        "alternateName": "Daya Technical",
+        "description": "توضیح شفاف درباره ساختاردهی تأمین مالی پروژه، نقش مستندات، مفهوم توکن‌سازی منافع اقتصادی و محدودیت‌های حقوقی و مقرراتی آن.",
+        "url": "https://YOUR-USERNAME.github.io/YOUR-REPO"
+      }
+    </script>
+    
+  </head>
+  <body>
+<div class="demo-bar" data-demo-bar role="note"><div class="demo-bar-inner"><span class="demo-bar-dot" aria-hidden="true"></span><span>نسخه نمایشی مستقل فرانت‌اند دایا تکنیکال — داده‌ها ارسال یا ذخیره نمی‌شوند.</span><button type="button" class="demo-bar-close" data-demo-bar-close aria-label="بستن پیام"><span aria-hidden="true">&times;</span></button></div></div>
+
+    <a class="skip-link" href="#main">رفتن به محتوای اصلی</a>
+    <svg xmlns="http://www.w3.org/2000/svg" class="visually-hidden" aria-hidden="true" focusable="false">
+  <symbol id="i-refinery" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 21h18M4 21V10l4 3V9l4 3V7l4 3V5h3v16"/>
+    <path d="M8 21v-3M12 21v-4M16 21v-3"/>
+  </symbol>
+  <symbol id="i-solar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="6" r="2.4"/>
+    <path d="M12 1.5v1M12 9.5v1M6.7 6h1M16.3 6h1M8.3 2.3l.7.7M15 9l.7.7M15.7 2.3l-.7.7M9 9l-.7.7"/>
+    <path d="M3 21l2.5-8h13L21 21H3zM6.5 16.5h11M12 13v8"/>
+  </symbol>
+  <symbol id="i-power" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/>
+  </symbol>
+  <symbol id="i-mining" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 21h18M4 21l4-9 4 3 3-5 4 11"/>
+    <path d="M14 2l6 2-2 6"/>
+  </symbol>
+  <symbol id="i-factory" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 21h18M4 21V9l5 3V9l5 3V9l5 3v9"/>
+    <path d="M7 21v-3M11 21v-3M15 21v-3M18 5h3"/>
+  </symbol>
+  <symbol id="i-infrastructure" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2 21h20M4 21V8l8-5 8 5v13"/>
+    <path d="M8 21v-6h3v6M13 21v-9h4v9M4 11h16"/>
+  </symbol>
+  <symbol id="i-other" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="8.2"/>
+    <path d="M12 8v4l3 2"/>
+  </symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5z"/>
+    <path d="M14 3v5h5M9 13h6M9 17h4"/>
+  </symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 20V4M4 20h16"/>
+    <path d="M8 16v-4M12 16V8M16 16v-6M20 16v-9"/>
+  </symbol>
+  <symbol id="i-structure" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="9" y="3" width="6" height="5" rx="1"/>
+    <rect x="2.5" y="16" width="6" height="5" rx="1"/>
+    <rect x="15.5" y="16" width="6" height="5" rx="1"/>
+    <path d="M12 8v4M5.5 16v-4h13v4"/>
+  </symbol>
+  <symbol id="i-token" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 2.5l8 4.6v9.8l-8 4.6-8-4.6V7.1l8-4.6z"/>
+    <path d="M12 7.5l4 2.3v4.6l-4 2.3-4-2.3V9.8l4-2.3z"/>
+  </symbol>
+  <symbol id="i-package" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 8l-9-5-9 5v8l9 5 9-5V8z"/>
+    <path d="M3 8l9 5 9-5M12 13v8"/>
+  </symbol>
+  <symbol id="i-handshake" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2 12l4-4 4 1 2 2 2-2 4-1 4 4"/>
+    <path d="M6 8v6l4 4 2-2 2 2 4-4V8"/>
+  </symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 12h14M13 6l6 6-6 6"/>
+  </symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="5" width="18" height="14" rx="2"/>
+    <path d="M3.5 6.5L12 13l8.5-6.5"/>
+  </symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6.5 3h3l1.5 4-2 1.5a12 12 0 0 0 6.5 6.5L17 13l4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.2 2 2 0 0 1 6.5 3z"/>
+  </symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z"/>
+    <circle cx="12" cy="10" r="2.6"/>
+  </symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="9"/>
+    <path d="M12 7.5V12l3 2"/>
+  </symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3l7 2.5v6c0 4.5-3 8-7 9.5-4-1.5-7-5-7-9.5v-6L12 3z"/>
+    <path d="M8.8 12l2.2 2.3 4.2-4.6"/>
+  </symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="9"/>
+    <path d="M15.5 8.5l-2 5-5 2 2-5 5-2z"/>
+  </symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4.2"/>
+    <path d="M12 2.5v2.2M12 19.3v2.2M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"/>
+  </symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 14.6A8.4 8.4 0 1 1 9.4 4a6.8 6.8 0 0 0 10.6 10.6z"/>
+  </symbol>
+  <symbol id="i-system" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2.5" y="4" width="19" height="12.5" rx="2"/>
+    <path d="M8.5 20.5h7M12 16.5v4M2.5 8.5h19"/>
+  </symbol>
+</svg>
+
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="../../fa/index.html" aria-label="دایا تکنیکال">
+          <img class="brand-mark" src="../../static/img/brand-mark.svg" alt="" width="38" height="38" />
+          <span class="brand-text">
+            <span class="brand-name">دایا تکنیکال</span>
+            <span class="brand-tag">مشاوره تأمین مالی پروژه</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="ناوبری اصلی">
+          <a class="nav-link" href="../../fa/index.html" >خانه</a>
+          <a class="nav-link" href="../../fa/services/index.html" >خدمات</a>
+          <a class="nav-link" href="../../fa/industries/index.html" >صنایع</a>
+          <a class="nav-link" href="../../fa/process/index.html" >فرایند همکاری</a>
+          <a class="nav-link" href="../../fa/financing/index.html" aria-current="page">تأمین مالی نوین</a>
+          <a class="nav-link" href="../../fa/about/index.html" >درباره ما</a>
+          <a class="nav-link" href="../../fa/faq/index.html" >پرسش‌های متداول</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" data-theme-toggle
+                  data-label-system="حالت نمایش: خودکار. برای تغییر فشار دهید."
+                  data-label-light="حالت نمایش: روشن. برای تغییر فشار دهید."
+                  data-label-dark="حالت نمایش: تاریک. برای تغییر فشار دهید."
+                  aria-label="حالت نمایش: خودکار. برای تغییر فشار دهید."
+                  title="حالت نمایش: خودکار. برای تغییر فشار دهید.">
+            <svg data-theme-icon="system" aria-hidden="true"><use href="#i-system"></use></svg>
+            <svg data-theme-icon="light" aria-hidden="true"><use href="#i-sun"></use></svg>
+            <svg data-theme-icon="dark" aria-hidden="true"><use href="#i-moon"></use></svg>
+          </button>
+          <span class="visually-hidden" role="status" aria-live="polite" data-theme-status></span>
+          <div class="lang-switch" role="group" aria-label="تغییر زبان">
+            <a href="../../fa/financing/index.html" aria-current="true" lang="fa" hreflang="fa" title="فارسی">فا</a>
+            <a href="../../en/financing/index.html"  lang="en" hreflang="en" title="English">EN</a>
+            <a href="../../ar/financing/index.html"  lang="ar" hreflang="ar" title="العربية">ع</a>
+          </div>
+          <a class="btn btn-accent btn-sm header-cta" href="../../fa/project-request/index.html">درخواست بررسی پروژه</a>
+          <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-navigation" aria-label="باز کردن منو">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <nav id="mobile-navigation" class="mobile-nav" data-mobile-nav aria-label="ناوبری موبایل">
+        <div class="lang-switch mobile-lang" role="group" aria-label="تغییر زبان">
+          <a href="../../fa/financing/index.html" aria-current="true" lang="fa" hreflang="fa" title="فارسی">فا</a>
+          <a href="../../en/financing/index.html"  lang="en" hreflang="en" title="English">EN</a>
+          <a href="../../ar/financing/index.html"  lang="ar" hreflang="ar" title="العربية">ع</a>
+        </div>
+        <a href="../../fa/index.html">خانه</a>
+        <a href="../../fa/services/index.html">خدمات</a>
+        <a href="../../fa/industries/index.html">صنایع</a>
+        <a href="../../fa/process/index.html">فرایند همکاری</a>
+        <a href="../../fa/financing/index.html">تأمین مالی نوین</a>
+        <a href="../../fa/about/index.html">درباره ما</a>
+        <a href="../../fa/faq/index.html">پرسش‌های متداول</a>
+        <a href="../../fa/contact/index.html">تماس با ما</a>
+        <a class="btn btn-accent" href="../../fa/project-request/index.html">درخواست بررسی پروژه</a>
+      </nav>
+    </header>
+
+    
+
+    <main id="main">
+<section class="page-hero">
+  <div class="container">
+    <ol class="breadcrumbs">
+      <li><a href="../../fa/index.html">خانه</a></li>
+      <li>تأمین مالی نوین</li>
+    </ol>
+    <p class="eyebrow">تأمین مالی نوین</p>
+    <h1>ساختار تأمین مالی و توکن‌سازی منافع اقتصادی</h1>
+    <p class="lead">
+      این صفحه توضیح می‌دهد ساختار تأمین مالی چگونه شکل می‌گیرد، مستندات چه نقشی دارند و توکن‌سازی منافع اقتصادی در چه شرایطی — و با چه محدودیت‌هایی — ممکن است قابل بررسی باشد.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split split--wide-start">
+    <div class="prose reveal">
+      <h2>نیاز مالی، ساختار تأمین مالی نیست</h2>
+      <p>
+        «چقدر سرمایه لازم است؟» تنها پرسش نیست. پرسش‌های مهم‌تر این‌ها هستند: سرمایه در چه مراحلی و با چه ترتیبی لازم می‌شود، بازپرداخت از کدام جریان نقدی انتظار می‌رود و ریسک هر مرحله بر عهده چه کسی است.
+      </p>
+      <p>
+        ساختار تأمین مالی ترکیبی از ابزارها، تعهدات و شرایط است که با مرحله پروژه، ماهیت دارایی و ظرفیت بازپرداخت آن هم‌خوانی داشته باشد. انتخاب ساختار پیش از شفاف شدن این موارد، تصمیمی شتاب‌زده است.
+      </p>
+
+      <h2>نقش مستندات و اطلاعات</h2>
+      <p>
+        طرح توجیهی، مفروضات درآمد و هزینه، وضعیت مجوزها و ساختار مالکیت، پایه هر بررسی جدی هستند. نبود این مستندات مانع شروع نیست، اما سطح تحلیل و اعتبار نتیجه را محدود می‌کند.
+      </p>
+
+      <h2>ساختارهای قراردادی و منافع اقتصادی</h2>
+      <p>
+        بسیاری از پروژه‌ها دارای جریان‌های اقتصادی قابل تعریف هستند: درآمد فروش انرژی، حق بهره‌برداری، سهم از عایدی یک دارایی یا منافع حاصل از یک قرارداد بلندمدت. پیش از هر اقدامی باید مشخص شود این منفعت چگونه تعریف، اندازه‌گیری، انتقال و در صورت اختلاف، چگونه حل‌وفصل می‌شود.
+      </p>
+    </div>
+
+    <aside class="panel panel--sand reveal">
+      <h3>خلاصه در یک نگاه</h3>
+      <ul class="check-list">
+        <li>توکن‌سازی یک ابزار بالقوه است، نه هدف پروژه.</li>
+        <li>بدون چارچوب حقوقی روشن قابل اجرا نیست.</li>
+        <li>نیازمند امکان‌سنجی فنی، مالی، حسابداری و مقرراتی است.</li>
+        <li>به معنای ایجاد ارزش جدید یا تضمین نقدشوندگی نیست.</li>
+        <li>برای همه پروژه‌ها مناسب نیست.</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section class="section section--sand">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">مفهوم</p>
+      <h2>توکن‌سازی منافع اقتصادی چه معنایی دارد؟</h2>
+      <p class="lead">
+        در این چارچوب، «توکن» صرفاً یک ابزار ثبت و انتقال حقوق و تعهدات مرتبط با یک منفعت اقتصادی است. اعتبار آن به پشتوانه حقوقی، قراردادی و عملیاتی همان منفعت وابسته است، نه به فناوری به‌تنهایی.
+      </p>
+    </div>
+
+    <div class="flow" style="max-width:760px">
+      <div class="flow-step"><div><strong>منفعت اقتصادی قابل تعریف</strong></div></div>
+      <div class="flow-step"><div><strong>ساختار حقوقی و قراردادی شفاف</strong></div></div>
+      <div class="flow-step"><div><strong>سیستم ثبت، اندازه‌گیری و تسویه</strong></div></div>
+      <div class="flow-step"><div><strong>انطباق با الزامات مقرراتی</strong></div></div>
+      <div class="flow-step"><div><strong>مدیریت ریسک و حل اختلاف</strong></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split">
+    <div class="reveal">
+      <h2>چه زمانی ممکن است قابل بررسی باشد؟</h2>
+      <ul class="check-list">
+        <li>وجود جریان اقتصادی روشن و قابل اندازه‌گیری در پروژه.</li>
+        <li>امکان تعریف دقیق حقوق، تعهدات و محدودیت‌های انتقال.</li>
+        <li>وجود مسیر حسابداری، گزارش‌دهی و تسویه قابل اجرا.</li>
+        <li>روشن بودن چارچوب مقرراتی حاکم بر انتشار و انتقال.</li>
+        <li>تناسب ساختار با مرحله پروژه و ظرفیت اجرایی تیم.</li>
+      </ul>
+    </div>
+    <div class="panel panel--ink reveal">
+      <h2 class="h3" style="font-size:var(--step-1)">محدودیت‌های روشن</h2>
+      <ul class="check-list" style="color:#c9d6e0">
+        <li>توکن‌سازی به‌خودی‌خود ارزش اقتصادی جدیدی ایجاد نمی‌کند.</li>
+        <li>تضمینی برای نقدشوندگی یا وجود خریدار ایجاد نمی‌کند.</li>
+        <li>بدون مجوزها و چارچوب حقوقی لازم قابل اجرا نیست.</li>
+        <li>جایگزین بررسی اقتصادی و امکان‌سنجی پروژه نیست.</li>
+      </ul>
+      <p class="small" style="margin-top:1rem">
+        هرگونه ارزیابی در این حوزه، پیش از هر اقدام اجرایی، نیازمند بررسی حقوقی مستقل و انطباق با مقررات محل اجرای پروژه است.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--sand">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">مرز خدمات</p>
+      <h2>نقش دایا تکنیکال و نقش شرکای تخصصی</h2>
+    </div>
+    <div class="grid grid--3">
+      <div class="card">
+        <h3>دایا تکنیکال</h3>
+        <p>بررسی اولیه پروژه، تحلیل اقتصادی و مالی، طراحی ساختار پیشنهادی تأمین مالی و هماهنگی خدمات مرتبط.</p>
+      </div>
+      <div class="card">
+        <h3>Daya Block و زیرساخت‌های گروه</h3>
+        <p>در صورت تناسب پروژه، ممکن است در بررسی راهکارهای توکن‌سازی و زیرساخت‌های دیجیتال مرتبط نقش داشته باشند.</p>
+      </div>
+      <div class="card">
+        <h3>شرکای تخصصی</h3>
+        <p>خدمات حقوقی، حسابرسی، ارزش‌گذاری رسمی، مجوزها و ارزیابی فنی که نیازمند صلاحیت یا مجوز مستقل است.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container cta-inner">
+    <div>
+      <h2>آیا توکن‌سازی برای پروژه شما قابل بررسی است؟</h2>
+      <p>این پرسش تنها پس از بررسی اطلاعات پروژه، ساختار حقوقی و شرایط اجرایی قابل پاسخ است.</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn-accent" href="../../fa/project-request/index.html">درخواست بررسی پروژه</a>
+    </div>
+  </div>
+</section>
+</main>
+
+    <footer class="site-footer">
+      <div class="container footer-main">
+        <div class="footer-brand">
+          <a class="brand" href="../../fa/index.html">
+            <img class="brand-mark" src="../../static/img/brand-mark.svg" alt="" width="38" height="38" />
+            <span class="brand-text">
+              <span class="brand-name">دایا تکنیکال</span>
+              <span class="brand-tag">مشاوره تأمین مالی پروژه</span>
+            </span>
+          </a>
+          <p>
+            بررسی فرصت‌های صنعتی، تحلیل اقتصادی و طراحی ساختار تأمین مالی متناسب با هر پروژه.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3>دسترسی سریع</h3>
+          <ul>
+            <li><a href="../../fa/about/index.html">درباره ما</a></li>
+            <li><a href="../../fa/services/index.html">خدمات</a></li>
+            <li><a href="../../fa/industries/index.html">صنایع</a></li>
+            <li><a href="../../fa/process/index.html">فرایند همکاری</a></li>
+            <li><a href="../../fa/financing/index.html">تأمین مالی نوین</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>مجوزها و اطلاعات حقوقی</h3>
+          <ul>
+            <li><a href="../../fa/legal/privacy/index.html">حریم خصوصی</a></li>
+            <li><a href="../../fa/legal/terms/index.html">شرایط استفاده</a></li>
+            <li><a href="../../fa/legal/disclaimer/index.html">محدودیت خدمات</a></li>
+            <li><a href="../../fa/project-request/index.html">درخواست بررسی پروژه</a></li>
+            <li><a href="../../fa/contact/index.html">تماس با ما</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-contact">
+          <h3>اطلاعات تماس</h3>
+          <dl>
+            <dt>تلفن</dt>
+            <dd><span class="muted">در حال تکمیل</span></dd>
+            <dt>ایمیل</dt>
+            <dd><span class="muted">در حال تکمیل</span></dd>
+            <dt>نشانی</dt>
+            <dd><span class="muted">در حال تکمیل</span></dd>
+          </dl>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>&copy; 2026 دایا تکنیکال — تمامی حقوق محفوظ است.</p>
+        <p>اطلاعات این وب‌سایت جنبه معرفی خدمات دارد و تعهد تأمین مالی ایجاد نمی‌کند.</p>
+      </div>
+    </footer>
+
+    <script src="../../static/js/site.js?v=20261024" defer></script>
+    <script src="../../static/js/demo.js" defer></script>
+    
+  </body>
+</html>

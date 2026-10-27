@@ -1,0 +1,125 @@
+/* ==========================================================================
+   Demo chrome — only exists in the standalone frontend copy.
+   It reuses the design tokens of site.css so the original look is preserved.
+   ========================================================================== */
+
+.demo-bar {
+  background: var(--copper-50);
+  border-bottom: 1px solid var(--copper-border);
+  color: var(--copper-600);
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.demo-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.45rem 1.25rem;
+  text-align: center;
+}
+
+.demo-bar-dot {
+  flex: 0 0 auto;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.demo-bar-close {
+  flex: 0 0 auto;
+  margin-inline-start: 0.35rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  line-height: 1;
+  color: inherit;
+  background: transparent;
+  border: 1px solid var(--copper-border);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.demo-bar-close:hover {
+  background: rgba(152, 99, 34, 0.12);
+}
+
+.demo-bar[hidden] {
+  display: none;
+}
+
+.demo-note,
+.demo-notice {
+  border: 1px solid var(--copper-border);
+  border-inline-start: 4px solid var(--copper);
+  background: var(--copper-50);
+  color: var(--ink-soft);
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+  margin: 1.2rem 0;
+  font-size: 0.92rem;
+}
+
+.demo-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.demo-notice-body {
+  flex: 1 1 auto;
+}
+
+.demo-notice strong {
+  display: block;
+  color: var(--copper-600);
+  margin-bottom: 0.15rem;
+}
+
+.demo-notice-text {
+  display: block;
+}
+
+.demo-notice-link {
+  display: inline-block;
+  margin-top: 0.45rem;
+  font-weight: 600;
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.demo-notice-close {
+  flex: 0 0 auto;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 0.15rem;
+}
+
+html[data-theme="dark"] .demo-bar,
+html[data-theme="dark"] .demo-note,
+html[data-theme="dark"] .demo-notice {
+  background: #1b1509;
+  border-color: #3d2f16;
+  color: #e6c795;
+}
+
+html[data-theme="dark"] .demo-notice strong,
+html[data-theme="dark"] .demo-notice-link {
+  color: #f0d6a8;
+}
+
+html[data-theme="dark"] .demo-bar-close:hover {
+  background: rgba(230, 199, 149, 0.16);
+}

@@ -1,0 +1,637 @@
+
+
+
+
+
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" data-theme-color />
+    <script>
+      /* Resolve the saved appearance before the first paint (no theme flash). */
+      (function () {
+        var pref = "system";
+        try {
+          var saved = window.localStorage.getItem("daya-theme");
+          if (saved === "light" || saved === "dark" || saved === "system") pref = saved;
+        } catch (error) {}
+        var dark = pref === "dark";
+        if (pref === "system" && window.matchMedia) {
+          dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        }
+        var root = document.documentElement;
+        root.classList.add("js");
+        root.setAttribute("data-theme", dark ? "dark" : "light");
+        root.setAttribute("data-theme-preference", pref);
+        var meta = document.querySelector("meta[data-theme-color]");
+        if (meta) meta.setAttribute("content", dark ? "#08131d" : "#ffffff");
+      })();
+    </script>
+    <title>Daya Technical | From Industrial Opportunity to Financing Structure</title>
+    <meta name="description" content="Daya Technical helps owners of large industrial projects assess financing opportunities, clarify project economics and evaluate financing structures suited to their needs." />
+    <meta name="robots" content="index,follow" />
+    <meta name="color-scheme" content="light dark" />
+    <noscript><style>.theme-toggle { display: none !important; }</style></noscript>
+
+    <link rel="canonical" href="https://YOUR-USERNAME.github.io/YOUR-REPO/en/" />
+    <link rel="alternate" hreflang="fa" href="https://YOUR-USERNAME.github.io/YOUR-REPO/fa/" />
+    <link rel="alternate" hreflang="en" href="https://YOUR-USERNAME.github.io/YOUR-REPO/en/" />
+    <link rel="alternate" hreflang="ar" href="https://YOUR-USERNAME.github.io/YOUR-REPO/ar/" />
+    <link rel="alternate" hreflang="x-default" href="https://YOUR-USERNAME.github.io/YOUR-REPO/fa/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Daya Technical" />
+    <meta property="og:title" content="Daya Technical | From Industrial Opportunity to Financing Structure" />
+    <meta property="og:description" content="Daya Technical helps owners of large industrial projects assess financing opportunities, clarify project economics and evaluate financing structures suited to their needs." />
+    <meta property="og:url" content="https://YOUR-USERNAME.github.io/YOUR-REPO/en/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="https://YOUR-USERNAME.github.io/YOUR-REPO/static/img/og-cover.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/svg+xml" href="../static/img/favicon.svg" />
+    <link rel="alternate icon" type="image/png" sizes="64x64" href="../static/img/favicon.png" />
+    <link rel="stylesheet" href="../static/fonts/fonts.css" />
+    
+    <link rel="stylesheet" href="../static/css/site.css?v=20261024" />
+    <link rel="stylesheet" href="../static/css/demo.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Daya Technical",
+        "alternateName": "Daya Technical",
+        "description": "Daya Technical helps owners of large industrial projects assess financing opportunities, clarify project economics and evaluate financing structures suited to their needs.",
+        "url": "https://YOUR-USERNAME.github.io/YOUR-REPO"
+      }
+    </script>
+    
+  </head>
+  <body>
+<div class="demo-bar" data-demo-bar role="note"><div class="demo-bar-inner"><span class="demo-bar-dot" aria-hidden="true"></span><span>Standalone Daya Technical frontend demo — nothing is sent or stored.</span><button type="button" class="demo-bar-close" data-demo-bar-close aria-label="Dismiss notice"><span aria-hidden="true">&times;</span></button></div></div>
+
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <svg xmlns="http://www.w3.org/2000/svg" class="visually-hidden" aria-hidden="true" focusable="false">
+  <symbol id="i-refinery" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 21h18M4 21V10l4 3V9l4 3V7l4 3V5h3v16"/>
+    <path d="M8 21v-3M12 21v-4M16 21v-3"/>
+  </symbol>
+  <symbol id="i-solar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="6" r="2.4"/>
+    <path d="M12 1.5v1M12 9.5v1M6.7 6h1M16.3 6h1M8.3 2.3l.7.7M15 9l.7.7M15.7 2.3l-.7.7M9 9l-.7.7"/>
+    <path d="M3 21l2.5-8h13L21 21H3zM6.5 16.5h11M12 13v8"/>
+  </symbol>
+  <symbol id="i-power" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/>
+  </symbol>
+  <symbol id="i-mining" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 21h18M4 21l4-9 4 3 3-5 4 11"/>
+    <path d="M14 2l6 2-2 6"/>
+  </symbol>
+  <symbol id="i-factory" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 21h18M4 21V9l5 3V9l5 3V9l5 3v9"/>
+    <path d="M7 21v-3M11 21v-3M15 21v-3M18 5h3"/>
+  </symbol>
+  <symbol id="i-infrastructure" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2 21h20M4 21V8l8-5 8 5v13"/>
+    <path d="M8 21v-6h3v6M13 21v-9h4v9M4 11h16"/>
+  </symbol>
+  <symbol id="i-other" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="8.2"/>
+    <path d="M12 8v4l3 2"/>
+  </symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5z"/>
+    <path d="M14 3v5h5M9 13h6M9 17h4"/>
+  </symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 20V4M4 20h16"/>
+    <path d="M8 16v-4M12 16V8M16 16v-6M20 16v-9"/>
+  </symbol>
+  <symbol id="i-structure" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="9" y="3" width="6" height="5" rx="1"/>
+    <rect x="2.5" y="16" width="6" height="5" rx="1"/>
+    <rect x="15.5" y="16" width="6" height="5" rx="1"/>
+    <path d="M12 8v4M5.5 16v-4h13v4"/>
+  </symbol>
+  <symbol id="i-token" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 2.5l8 4.6v9.8l-8 4.6-8-4.6V7.1l8-4.6z"/>
+    <path d="M12 7.5l4 2.3v4.6l-4 2.3-4-2.3V9.8l4-2.3z"/>
+  </symbol>
+  <symbol id="i-package" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 8l-9-5-9 5v8l9 5 9-5V8z"/>
+    <path d="M3 8l9 5 9-5M12 13v8"/>
+  </symbol>
+  <symbol id="i-handshake" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2 12l4-4 4 1 2 2 2-2 4-1 4 4"/>
+    <path d="M6 8v6l4 4 2-2 2 2 4-4V8"/>
+  </symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 12h14M13 6l6 6-6 6"/>
+  </symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="5" width="18" height="14" rx="2"/>
+    <path d="M3.5 6.5L12 13l8.5-6.5"/>
+  </symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6.5 3h3l1.5 4-2 1.5a12 12 0 0 0 6.5 6.5L17 13l4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.2 2 2 0 0 1 6.5 3z"/>
+  </symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z"/>
+    <circle cx="12" cy="10" r="2.6"/>
+  </symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="9"/>
+    <path d="M12 7.5V12l3 2"/>
+  </symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3l7 2.5v6c0 4.5-3 8-7 9.5-4-1.5-7-5-7-9.5v-6L12 3z"/>
+    <path d="M8.8 12l2.2 2.3 4.2-4.6"/>
+  </symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="9"/>
+    <path d="M15.5 8.5l-2 5-5 2 2-5 5-2z"/>
+  </symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4.2"/>
+    <path d="M12 2.5v2.2M12 19.3v2.2M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"/>
+  </symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 14.6A8.4 8.4 0 1 1 9.4 4a6.8 6.8 0 0 0 10.6 10.6z"/>
+  </symbol>
+  <symbol id="i-system" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2.5" y="4" width="19" height="12.5" rx="2"/>
+    <path d="M8.5 20.5h7M12 16.5v4M2.5 8.5h19"/>
+  </symbol>
+</svg>
+
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="../en/index.html" aria-label="Daya Technical">
+          <img class="brand-mark" src="../static/img/brand-mark.svg" alt="" width="38" height="38" />
+          <span class="brand-text">
+            <span class="brand-name">Daya Technical</span>
+            <span class="brand-tag">Project Finance Advisory</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Main navigation">
+          <a class="nav-link" href="../en/index.html" aria-current="page">Home</a>
+          <a class="nav-link" href="../en/services/index.html" >Services</a>
+          <a class="nav-link" href="../en/industries/index.html" >Industries</a>
+          <a class="nav-link" href="../en/process/index.html" >How We Work</a>
+          <a class="nav-link" href="../en/financing/index.html" >Innovative Financing</a>
+          <a class="nav-link" href="../en/about/index.html" >About Us</a>
+          <a class="nav-link" href="../en/faq/index.html" >FAQ</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" data-theme-toggle
+                  data-label-system="Appearance: system. Press to change."
+                  data-label-light="Appearance: light. Press to change."
+                  data-label-dark="Appearance: dark. Press to change."
+                  aria-label="Appearance: system. Press to change."
+                  title="Appearance: system. Press to change.">
+            <svg data-theme-icon="system" aria-hidden="true"><use href="#i-system"></use></svg>
+            <svg data-theme-icon="light" aria-hidden="true"><use href="#i-sun"></use></svg>
+            <svg data-theme-icon="dark" aria-hidden="true"><use href="#i-moon"></use></svg>
+          </button>
+          <span class="visually-hidden" role="status" aria-live="polite" data-theme-status></span>
+          <div class="lang-switch" role="group" aria-label="Change language">
+            <a href="../fa/index.html"  lang="fa" hreflang="fa" title="فارسی">فا</a>
+            <a href="../en/index.html" aria-current="true" lang="en" hreflang="en" title="English">EN</a>
+            <a href="../ar/index.html"  lang="ar" hreflang="ar" title="العربية">ع</a>
+          </div>
+          <a class="btn btn-accent btn-sm header-cta" href="../en/project-request/index.html">Submit a Project</a>
+          <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-navigation" aria-label="Open menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <nav id="mobile-navigation" class="mobile-nav" data-mobile-nav aria-label="Mobile navigation">
+        <div class="lang-switch mobile-lang" role="group" aria-label="Change language">
+          <a href="../fa/index.html"  lang="fa" hreflang="fa" title="فارسی">فا</a>
+          <a href="../en/index.html" aria-current="true" lang="en" hreflang="en" title="English">EN</a>
+          <a href="../ar/index.html"  lang="ar" hreflang="ar" title="العربية">ع</a>
+        </div>
+        <a href="../en/index.html">Home</a>
+        <a href="../en/services/index.html">Services</a>
+        <a href="../en/industries/index.html">Industries</a>
+        <a href="../en/process/index.html">How We Work</a>
+        <a href="../en/financing/index.html">Innovative Financing</a>
+        <a href="../en/about/index.html">About Us</a>
+        <a href="../en/faq/index.html">FAQ</a>
+        <a href="../en/contact/index.html">Contact</a>
+        <a class="btn btn-accent" href="../en/project-request/index.html">Submit a Project</a>
+      </nav>
+    </header>
+
+    
+
+    <main id="main">
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-copy reveal">
+      <p class="eyebrow">Industrial Project Finance</p>
+      <h1>From Industrial Opportunity to Financing Structure</h1>
+      <p class="hero-lead">
+        Daya Technical helps owners of large industrial projects assess financing opportunities, clarify project economics and explore financing structures suited to their needs.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-accent" href="../en/project-request/index.html">Submit a Project</a>
+        <a class="btn btn-ghost" href="../en/services/index.html">Explore Our Services</a>
+      </div>
+      <ul class="hero-facts">
+        <li>Initial project assessment</li>
+        <li>Economic and financial analysis</li>
+        <li>Financing structure design</li>
+      </ul>
+    </div>
+
+    <figure class="hero-media reveal">
+      <picture>
+        <source srcset="../static/images/dayate.webp" type="image/webp" />
+        <img
+          src="../static/images/dayate.png"
+          width="1671"
+          height="941"
+          alt="Isometric view of an industrial complex with distillation towers, storage tanks, solar arrays and connected energy and data grids"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+        />
+      </picture>
+    </figure>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split split--wide-start">
+    <div class="reveal">
+      <p class="eyebrow">About Daya Technical</p>
+      <h2>A structured approach to industrial project finance</h2>
+      <p>
+        Large industrial projects need a precise understanding of their funding requirement, a rigorous economic case, an appropriate structure and coordination between stakeholders. Daya Technical focuses on exactly this: assessing industrial opportunities and the financing routes available to them.
+      </p>
+      <p>
+        Our work starts with an initial understanding of the project and continues through its documents, information and execution conditions, producing a clearer picture of the needs, constraints and options ahead.
+      </p>
+      <a class="text-link" href="../en/about/index.html">Learn more <svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+    </div>
+
+    <div class="panel panel--sand reveal">
+      <h3>How we work</h3>
+      <ul class="check-list">
+        <li>Analysis rather than promises; every conclusion rests on the information provided.</li>
+        <li>Transparency about scope, responsibilities and the boundaries of each stage.</li>
+        <li>Confidentiality of project information and restricted access to it.</li>
+        <li>A solution that fits each project instead of a single template for all.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section--sand">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Industries and sectors</p>
+      <h2>The projects we assess</h2>
+      <p class="lead">
+        The sectors below are Daya Technical's target areas. Acceptance of any project depends on initial review, completeness of information and fit with our service scope.
+      </p>
+    </div>
+
+    <div class="grid grid--3 reveal">
+      
+      <a class="industry-card" href="../en/industries/refining-oil-gas/index.html">
+        <span class="icon" aria-hidden="true"><svg width="24" height="24"><use href="#i-refinery"></use></svg></span>
+        <h3>Refining, Oil and Gas</h3>
+        <p>Capital-intensive projects with long delivery cycles and complex contractual risk</p>
+      </a>
+      
+      <a class="industry-card" href="../en/industries/solar-power/index.html">
+        <span class="icon" aria-hidden="true"><svg width="24" height="24"><use href="#i-solar"></use></svg></span>
+        <h3>Solar Power</h3>
+        <p>Renewable generation with strong dependence on the power purchase agreement</p>
+      </a>
+      
+      <a class="industry-card" href="../en/industries/power-generation/index.html">
+        <span class="icon" aria-hidden="true"><svg width="24" height="24"><use href="#i-power"></use></svg></span>
+        <h3>Power Generation</h3>
+        <p>Generation projects with varied revenue and contractual structures</p>
+      </a>
+      
+      <a class="industry-card" href="../en/industries/mining/index.html">
+        <span class="icon" aria-hidden="true"><svg width="24" height="24"><use href="#i-mining"></use></svg></span>
+        <h3>Mining and Minerals</h3>
+        <p>Resource-driven projects exposed to exploration, price and infrastructure risk</p>
+      </a>
+      
+      <a class="industry-card" href="../en/industries/manufacturing/index.html">
+        <span class="icon" aria-hidden="true"><svg width="24" height="24"><use href="#i-factory"></use></svg></span>
+        <h3>Manufacturing and Capital-Intensive Plants</h3>
+        <p>New production lines or capacity expansion with clear equipment and working capital needs</p>
+      </a>
+      
+      <a class="industry-card" href="../en/industries/industrial-infrastructure/index.html">
+        <span class="icon" aria-hidden="true"><svg width="24" height="24"><use href="#i-infrastructure"></use></svg></span>
+        <h3>Industrial and Energy Infrastructure</h3>
+        <p>Industrial zones, networks and supporting facilities with long payback horizons</p>
+      </a>
+      
+      <a class="industry-card" href="../en/industries/other-large-projects/index.html">
+        <span class="icon" aria-hidden="true"><svg width="24" height="24"><use href="#i-other"></use></svg></span>
+        <h3>Other Large Projects with a Defined Financing Need</h3>
+        <p>Asset-based projects outside the list, subject to fit with our scope</p>
+      </a>
+      
+    </div>
+
+    <p style="margin-top: 2rem"><a class="text-link" href="../en/industries/index.html">View all industries <svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"></use></svg></a></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Daya Technical services</p>
+      <h2>From first assessment to negotiation readiness</h2>
+    </div>
+
+    <div class="grid grid--3 reveal">
+      
+      <a class="card" href="../en/services/initial-project-assessment/index.html">
+        <span class="card-index">01</span>
+        <span class="card-icon" aria-hidden="true"><svg width="24" height="24"><use href="#i-doc"></use></svg></span>
+        <h3>Initial Project Assessment</h3>
+        <p>Understanding the product, capacity, development stage and core needs of a project before any deeper review.</p>
+        <span class="text-link" style="margin-top:.7rem">Service details <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"></use></svg></span>
+      </a>
+      
+      <a class="card" href="../en/services/economic-financial-analysis/index.html">
+        <span class="card-index">02</span>
+        <span class="card-icon" aria-hidden="true"><svg width="24" height="24"><use href="#i-chart"></use></svg></span>
+        <h3>Economic and Financial Analysis</h3>
+        <p>Reviewing cost structure and capital need, analysing projected revenues and identifying key assumptions and risks.</p>
+        <span class="text-link" style="margin-top:.7rem">Service details <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"></use></svg></span>
+      </a>
+      
+      <a class="card" href="../en/services/financing-structure-design/index.html">
+        <span class="card-index">03</span>
+        <span class="card-icon" aria-hidden="true"><svg width="24" height="24"><use href="#i-structure"></use></svg></span>
+        <h3>Financing Structure Design</h3>
+        <p>Assessing the size and timing of the financing need and evaluating potential routes that fit the project&#x27;s stage.</p>
+        <span class="text-link" style="margin-top:.7rem">Service details <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"></use></svg></span>
+      </a>
+      
+      <a class="card" href="../en/services/tokenization-assessment/index.html">
+        <span class="card-index">04</span>
+        <span class="card-icon" aria-hidden="true"><svg width="24" height="24"><use href="#i-token"></use></svg></span>
+        <h3>Tokenization of Economic Interests</h3>
+        <p>An initial assessment of whether an economic interest can be defined, recorded and transferred within legal, financial and regulatory requirements.</p>
+        <span class="text-link" style="margin-top:.7rem">Service details <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"></use></svg></span>
+      </a>
+      
+      <a class="card" href="../en/services/project-information-packaging/index.html">
+        <span class="card-index">05</span>
+        <span class="card-icon" aria-hidden="true"><svg width="24" height="24"><use href="#i-package"></use></svg></span>
+        <h3>Project Information Preparation</h3>
+        <p>Organising basic information and preparing a project presentation framework for conversations with potential counterparties.</p>
+        <span class="text-link" style="margin-top:.7rem">Service details <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"></use></svg></span>
+      </a>
+      
+      <a class="card" href="../en/services/specialist-coordination/index.html">
+        <span class="card-index">06</span>
+        <span class="card-icon" aria-hidden="true"><svg width="24" height="24"><use href="#i-handshake"></use></svg></span>
+        <h3>Specialist Coordination</h3>
+        <p>Identifying legal, technical, financial and operational needs and coordinating with specialists or partners where agreed.</p>
+        <span class="text-link" style="margin-top:.7rem">Service details <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"></use></svg></span>
+      </a>
+      
+    </div>
+
+    <p style="margin-top: 2rem"><a class="text-link" href="../en/services/index.html">View all services <svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"></use></svg></a></p>
+  </div>
+</section>
+
+<section class="section section--sand">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">How We Work</p>
+      <h2>A clear path from first request to an informed decision</h2>
+    </div>
+
+    <ol class="process-list reveal">
+      <li class="process-item">
+        <h3>Initial request</h3>
+        <p>The project's basic information is submitted through the request form.</p>
+      </li>
+      <li class="process-item">
+        <h3>Initial screening</h3>
+        <p>We assess how complete the information is and whether a review can continue.</p>
+      </li>
+      <li class="process-item">
+        <h3>Additional information</h3>
+        <p>Where necessary, we provide a list of the documents and data required.</p>
+      </li>
+      <li class="process-item">
+        <h3>Eligibility assessment</h3>
+        <p>We determine whether the project fits our scope and review capacity.</p>
+      </li>
+      <li class="process-item">
+        <h3>Scope proposal</h3>
+        <p>We set out the proposed stages, outputs and responsibilities.</p>
+      </li>
+      <li class="process-item">
+        <h3>Agreement and start</h3>
+        <p>Once agreed, specialist work begins within the defined scope.</p>
+      </li>
+      <li class="process-item">
+        <h3>Financing routes</h3>
+        <p>Potential options and their fit with the project are evaluated.</p>
+      </li>
+      <li class="process-item">
+        <h3>Findings and next steps</h3>
+        <p>A clearer picture of needs, constraints and options is provided.</p>
+      </li>
+    </ol>
+
+    <p style="margin-top: 2rem"><a class="text-link" href="../en/process/index.html">See the process <svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"></use></svg></a></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split">
+    <div class="reveal">
+      <p class="eyebrow">Innovative Financing</p>
+      <h2>Tokenization of economic interests: a potential tool, not a default answer</h2>
+      <p>
+        A financing structure should follow the project's economic flows, its legal and contractual framework and its execution conditions. Tokenization of economic interests can only be explored once those prerequisites have been assessed.
+      </p>
+      <a class="text-link" href="../en/financing/index.html">Learn more <svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+    </div>
+
+    <div class="reveal">
+      <div class="flow">
+        <div class="flow-step"><div><strong>Identify the economic interest</strong><span>A definable revenue or benefit stream</span></div></div>
+        <div class="flow-step"><div><strong>Legal and contractual structure</strong><span>Rights, obligations and risks of each party</span></div></div>
+        <div class="flow-step"><div><strong>Technical and regulatory feasibility</strong><span>Infrastructure, accounting and oversight requirements</span></div></div>
+        <div class="flow-step"><div><strong>Financing instrument decision</strong><span>Choosing a suitable structure, or deciding against it</span></div></div>
+      </div>
+      <p class="small muted" style="margin-top:1rem">
+        Tokenization does not create new economic value and does not guarantee liquidity.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--sand">
+  <div class="container">
+    <div class="section-head section-head--center reveal">
+      <p class="eyebrow">Why this approach</p>
+      <h2>Focused on the decisions that matter</h2>
+    </div>
+    <div class="grid grid--4 reveal">
+      <div class="card card--flat">
+        <span class="card-icon" aria-hidden="true"><svg width="24" height="24"><use href="#i-compass"></use></svg></span>
+        <h3>Built for large projects</h3>
+        <p>Capital-intensive, asset-based projects with a defined financing need.</p>
+      </div>
+      <div class="card card--flat">
+        <span class="card-icon" aria-hidden="true"><svg width="24" height="24"><use href="#i-chart"></use></svg></span>
+        <h3>Analysis linked to structure</h3>
+        <p>Economic findings feed directly into the financing structure.</p>
+      </div>
+      <div class="card card--flat">
+        <span class="card-icon" aria-hidden="true"><svg width="24" height="24"><use href="#i-shield"></use></svg></span>
+        <h3>Confidentiality</h3>
+        <p>Access to project information is restricted and controlled.</p>
+      </div>
+      <div class="card card--flat">
+        <span class="card-icon" aria-hidden="true"><svg width="24" height="24"><use href="#i-handshake"></use></svg></span>
+        <h3>Specialist coordination</h3>
+        <p>Working with legal, financial and technical specialists where the project requires it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">FAQ</p>
+      <h2>Short answers to common questions</h2>
+    </div>
+    <div class="faq-list reveal">
+      
+      <details class="faq-item">
+        <summary>What services does Daya Technical provide?</summary>
+        <div class="faq-answer"><p>Our services cover initial project assessment, economic and financial analysis, financing structure design, assessment of tokenization of economic interests, project information preparation and coordination of specialist services. Each service begins after agreement on scope, timing and outputs, and none replaces licensed services such as audit or formal valuation.</p></div>
+      </details>
+      
+      <details class="faq-item">
+        <summary>Which projects can submit a request?</summary>
+        <div class="faq-answer"><p>Industrial, capital-intensive projects with a defined financing need: refining and oil and gas, solar power, power generation, mining, manufacturing and industrial infrastructure. The project should have a defined asset or service, and the applicant should be authorised to present its information. Final fit is determined during the initial review.</p></div>
+      </details>
+      
+      <details class="faq-item">
+        <summary>What information is needed for an initial review?</summary>
+        <div class="faq-answer"><p>Basic applicant information, a description of the project and its current stage, location, the size of the financing requirement and the status of key documents such as a feasibility study and permits. Missing documents do not prevent submission, but they affect the depth and duration of the review.</p></div>
+      </details>
+      
+      <details class="faq-item">
+        <summary>Does submitting a request create any cost or commitment?</summary>
+        <div class="faq-answer"><p>Submitting an initial request is free of charge and creates no commitment for either party. The cost and terms of each stage are stated before that stage begins, within a defined agreement.</p></div>
+      </details>
+      
+      <details class="faq-item">
+        <summary>Does submitting a request guarantee financing?</summary>
+        <div class="faq-answer"><p>No. No stage of this process guarantees financing, certain profit, a guaranteed return or investment approval. Our aim is to clarify the needs, constraints and options facing the project so that decisions are better informed.</p></div>
+      </details>
+      
+    </div>
+    <p style="margin-top: 2rem"><a class="text-link" href="../en/faq/index.html">Read the FAQ <svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"></use></svg></a></p>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container cta-inner">
+    <div class="reveal">
+      <h2>Submit your project for an initial review</h2>
+      <p>
+        Share the basic information so that the review and next steps can be determined. Submitting a request does not mean the project is accepted or that financing is committed.
+      </p>
+    </div>
+    <div class="cta-actions reveal">
+      <a class="btn btn-accent" href="../en/project-request/index.html">Submit a Project</a>
+      <a class="btn btn-on-dark" href="../en/contact/index.html">Contact</a>
+    </div>
+  </div>
+</section>
+</main>
+
+    <footer class="site-footer">
+      <div class="container footer-main">
+        <div class="footer-brand">
+          <a class="brand" href="../en/index.html">
+            <img class="brand-mark" src="../static/img/brand-mark.svg" alt="" width="38" height="38" />
+            <span class="brand-text">
+              <span class="brand-name">Daya Technical</span>
+              <span class="brand-tag">Project Finance Advisory</span>
+            </span>
+          </a>
+          <p>
+            Assessing industrial opportunities, analysing economics and designing financing structures that fit each project.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Quick links</h3>
+          <ul>
+            <li><a href="../en/about/index.html">About Us</a></li>
+            <li><a href="../en/services/index.html">Services</a></li>
+            <li><a href="../en/industries/index.html">Industries</a></li>
+            <li><a href="../en/process/index.html">How We Work</a></li>
+            <li><a href="../en/financing/index.html">Innovative Financing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Legal information</h3>
+          <ul>
+            <li><a href="../en/legal/privacy/index.html">Privacy Policy</a></li>
+            <li><a href="../en/legal/terms/index.html">Terms of Use</a></li>
+            <li><a href="../en/legal/disclaimer/index.html">Service Limitations</a></li>
+            <li><a href="../en/project-request/index.html">Submit a Project</a></li>
+            <li><a href="../en/contact/index.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-contact">
+          <h3>Contact details</h3>
+          <dl>
+            <dt>Phone</dt>
+            <dd><span class="muted">To be completed</span></dd>
+            <dt>Email</dt>
+            <dd><span class="muted">To be completed</span></dd>
+            <dt>Address</dt>
+            <dd><span class="muted">To be completed</span></dd>
+          </dl>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>&copy; 2026 Daya Technical — All rights reserved.</p>
+        <p>This website describes our services only and creates no financing commitment.</p>
+      </div>
+    </footer>
+
+    <script src="../static/js/site.js?v=20261024" defer></script>
+    <script src="../static/js/demo.js" defer></script>
+    
+  </body>
+</html>

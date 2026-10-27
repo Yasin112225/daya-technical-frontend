@@ -1,0 +1,34 @@
+# Everything the site needs (index.html, 404.html, fa/, en/, ar/, static/) is
+# tracked. This file only keeps local, generated and sensitive files out of the
+# repository — nothing here may match a file the browser loads.
+
+# Operating system and editor leftovers
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+desktop.ini
+*.swp
+*~
+
+# Python bytecode and virtual environments (serve.py is the only Python file here)
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+env/
+
+# Local configuration, secrets and databases — never part of a static site
+.env
+.env.*
+!.env.example
+*.sqlite3
+db.sqlite3
+
+# Output of the GitHub Actions workflow (`_site` is built on the runner)
+_site/
+
+# Logs and caches
+*.log
+.cache/

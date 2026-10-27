@@ -1,0 +1,428 @@
+
+
+
+
+
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" data-theme-color />
+    <script>
+      /* Resolve the saved appearance before the first paint (no theme flash). */
+      (function () {
+        var pref = "system";
+        try {
+          var saved = window.localStorage.getItem("daya-theme");
+          if (saved === "light" || saved === "dark" || saved === "system") pref = saved;
+        } catch (error) {}
+        var dark = pref === "dark";
+        if (pref === "system" && window.matchMedia) {
+          dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        }
+        var root = document.documentElement;
+        root.classList.add("js");
+        root.setAttribute("data-theme", dark ? "dark" : "light");
+        root.setAttribute("data-theme-preference", pref);
+        var meta = document.querySelector("meta[data-theme-color]");
+        if (meta) meta.setAttribute("content", dark ? "#08131d" : "#ffffff");
+      })();
+    </script>
+    <title>التمويل الحديث وترميز المصالح الاقتصادية | دايا التقنية</title>
+    <meta name="description" content="شرح واضح لهياكل تمويل المشاريع ودور المستندات ومفهوم ترميز المصالح الاقتصادية وحدوده القانونية." />
+    <meta name="robots" content="index,follow" />
+    <meta name="color-scheme" content="light dark" />
+    <noscript><style>.theme-toggle { display: none !important; }</style></noscript>
+
+    <link rel="canonical" href="https://YOUR-USERNAME.github.io/YOUR-REPO/ar/financing/" />
+    <link rel="alternate" hreflang="fa" href="https://YOUR-USERNAME.github.io/YOUR-REPO/fa/financing/" />
+    <link rel="alternate" hreflang="en" href="https://YOUR-USERNAME.github.io/YOUR-REPO/en/financing/" />
+    <link rel="alternate" hreflang="ar" href="https://YOUR-USERNAME.github.io/YOUR-REPO/ar/financing/" />
+    <link rel="alternate" hreflang="x-default" href="https://YOUR-USERNAME.github.io/YOUR-REPO/fa/financing/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="دايا التقنية" />
+    <meta property="og:title" content="التمويل الحديث وترميز المصالح الاقتصادية | دايا التقنية" />
+    <meta property="og:description" content="شرح واضح لهياكل تمويل المشاريع ودور المستندات ومفهوم ترميز المصالح الاقتصادية وحدوده القانونية." />
+    <meta property="og:url" content="https://YOUR-USERNAME.github.io/YOUR-REPO/ar/financing/" />
+    <meta property="og:locale" content="ar_AR" />
+    <meta property="og:image" content="https://YOUR-USERNAME.github.io/YOUR-REPO/static/img/og-cover.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/svg+xml" href="../../static/img/favicon.svg" />
+    <link rel="alternate icon" type="image/png" sizes="64x64" href="../../static/img/favicon.png" />
+    <link rel="stylesheet" href="../../static/fonts/fonts.css" />
+    
+    <link rel="stylesheet" href="../../static/css/site.css?v=20261024" />
+    <link rel="stylesheet" href="../../static/css/demo.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "دايا التقنية",
+        "alternateName": "Daya Technical",
+        "description": "شرح واضح لهياكل تمويل المشاريع ودور المستندات ومفهوم ترميز المصالح الاقتصادية وحدوده القانونية.",
+        "url": "https://YOUR-USERNAME.github.io/YOUR-REPO"
+      }
+    </script>
+    
+  </head>
+  <body>
+<div class="demo-bar" data-demo-bar role="note"><div class="demo-bar-inner"><span class="demo-bar-dot" aria-hidden="true"></span><span>نسخة عرض مستقلة لواجهة دايا التقنية — لا تُرسَل البيانات ولا تُحفظ.</span><button type="button" class="demo-bar-close" data-demo-bar-close aria-label="إغلاق الإشعار"><span aria-hidden="true">&times;</span></button></div></div>
+
+    <a class="skip-link" href="#main">الانتقال إلى المحتوى</a>
+    <svg xmlns="http://www.w3.org/2000/svg" class="visually-hidden" aria-hidden="true" focusable="false">
+  <symbol id="i-refinery" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 21h18M4 21V10l4 3V9l4 3V7l4 3V5h3v16"/>
+    <path d="M8 21v-3M12 21v-4M16 21v-3"/>
+  </symbol>
+  <symbol id="i-solar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="6" r="2.4"/>
+    <path d="M12 1.5v1M12 9.5v1M6.7 6h1M16.3 6h1M8.3 2.3l.7.7M15 9l.7.7M15.7 2.3l-.7.7M9 9l-.7.7"/>
+    <path d="M3 21l2.5-8h13L21 21H3zM6.5 16.5h11M12 13v8"/>
+  </symbol>
+  <symbol id="i-power" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/>
+  </symbol>
+  <symbol id="i-mining" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 21h18M4 21l4-9 4 3 3-5 4 11"/>
+    <path d="M14 2l6 2-2 6"/>
+  </symbol>
+  <symbol id="i-factory" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 21h18M4 21V9l5 3V9l5 3V9l5 3v9"/>
+    <path d="M7 21v-3M11 21v-3M15 21v-3M18 5h3"/>
+  </symbol>
+  <symbol id="i-infrastructure" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2 21h20M4 21V8l8-5 8 5v13"/>
+    <path d="M8 21v-6h3v6M13 21v-9h4v9M4 11h16"/>
+  </symbol>
+  <symbol id="i-other" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="8.2"/>
+    <path d="M12 8v4l3 2"/>
+  </symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5z"/>
+    <path d="M14 3v5h5M9 13h6M9 17h4"/>
+  </symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 20V4M4 20h16"/>
+    <path d="M8 16v-4M12 16V8M16 16v-6M20 16v-9"/>
+  </symbol>
+  <symbol id="i-structure" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="9" y="3" width="6" height="5" rx="1"/>
+    <rect x="2.5" y="16" width="6" height="5" rx="1"/>
+    <rect x="15.5" y="16" width="6" height="5" rx="1"/>
+    <path d="M12 8v4M5.5 16v-4h13v4"/>
+  </symbol>
+  <symbol id="i-token" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 2.5l8 4.6v9.8l-8 4.6-8-4.6V7.1l8-4.6z"/>
+    <path d="M12 7.5l4 2.3v4.6l-4 2.3-4-2.3V9.8l4-2.3z"/>
+  </symbol>
+  <symbol id="i-package" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 8l-9-5-9 5v8l9 5 9-5V8z"/>
+    <path d="M3 8l9 5 9-5M12 13v8"/>
+  </symbol>
+  <symbol id="i-handshake" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2 12l4-4 4 1 2 2 2-2 4-1 4 4"/>
+    <path d="M6 8v6l4 4 2-2 2 2 4-4V8"/>
+  </symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 12h14M13 6l6 6-6 6"/>
+  </symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="5" width="18" height="14" rx="2"/>
+    <path d="M3.5 6.5L12 13l8.5-6.5"/>
+  </symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6.5 3h3l1.5 4-2 1.5a12 12 0 0 0 6.5 6.5L17 13l4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.2 2 2 0 0 1 6.5 3z"/>
+  </symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z"/>
+    <circle cx="12" cy="10" r="2.6"/>
+  </symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="9"/>
+    <path d="M12 7.5V12l3 2"/>
+  </symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3l7 2.5v6c0 4.5-3 8-7 9.5-4-1.5-7-5-7-9.5v-6L12 3z"/>
+    <path d="M8.8 12l2.2 2.3 4.2-4.6"/>
+  </symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="9"/>
+    <path d="M15.5 8.5l-2 5-5 2 2-5 5-2z"/>
+  </symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4.2"/>
+    <path d="M12 2.5v2.2M12 19.3v2.2M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"/>
+  </symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 14.6A8.4 8.4 0 1 1 9.4 4a6.8 6.8 0 0 0 10.6 10.6z"/>
+  </symbol>
+  <symbol id="i-system" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2.5" y="4" width="19" height="12.5" rx="2"/>
+    <path d="M8.5 20.5h7M12 16.5v4M2.5 8.5h19"/>
+  </symbol>
+</svg>
+
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="../../ar/index.html" aria-label="دايا التقنية">
+          <img class="brand-mark" src="../../static/img/brand-mark.svg" alt="" width="38" height="38" />
+          <span class="brand-text">
+            <span class="brand-name">دايا التقنية</span>
+            <span class="brand-tag">استشارات تمويل المشاريع</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="التنقل الرئيسي">
+          <a class="nav-link" href="../../ar/index.html" >الرئيسية</a>
+          <a class="nav-link" href="../../ar/services/index.html" >الخدمات</a>
+          <a class="nav-link" href="../../ar/industries/index.html" >القطاعات</a>
+          <a class="nav-link" href="../../ar/process/index.html" >مسار التعاون</a>
+          <a class="nav-link" href="../../ar/financing/index.html" aria-current="page">التمويل الحديث</a>
+          <a class="nav-link" href="../../ar/about/index.html" >من نحن</a>
+          <a class="nav-link" href="../../ar/faq/index.html" >الأسئلة الشائعة</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" data-theme-toggle
+                  data-label-system="المظهر: تلقائي. اضغط للتغيير."
+                  data-label-light="المظهر: فاتح. اضغط للتغيير."
+                  data-label-dark="المظهر: داكن. اضغط للتغيير."
+                  aria-label="المظهر: تلقائي. اضغط للتغيير."
+                  title="المظهر: تلقائي. اضغط للتغيير.">
+            <svg data-theme-icon="system" aria-hidden="true"><use href="#i-system"></use></svg>
+            <svg data-theme-icon="light" aria-hidden="true"><use href="#i-sun"></use></svg>
+            <svg data-theme-icon="dark" aria-hidden="true"><use href="#i-moon"></use></svg>
+          </button>
+          <span class="visually-hidden" role="status" aria-live="polite" data-theme-status></span>
+          <div class="lang-switch" role="group" aria-label="تغيير اللغة">
+            <a href="../../fa/financing/index.html"  lang="fa" hreflang="fa" title="فارسی">فا</a>
+            <a href="../../en/financing/index.html"  lang="en" hreflang="en" title="English">EN</a>
+            <a href="../../ar/financing/index.html" aria-current="true" lang="ar" hreflang="ar" title="العربية">ع</a>
+          </div>
+          <a class="btn btn-accent btn-sm header-cta" href="../../ar/project-request/index.html">تقديم مشروع</a>
+          <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-navigation" aria-label="فتح القائمة">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <nav id="mobile-navigation" class="mobile-nav" data-mobile-nav aria-label="التنقل للجوال">
+        <div class="lang-switch mobile-lang" role="group" aria-label="تغيير اللغة">
+          <a href="../../fa/financing/index.html"  lang="fa" hreflang="fa" title="فارسی">فا</a>
+          <a href="../../en/financing/index.html"  lang="en" hreflang="en" title="English">EN</a>
+          <a href="../../ar/financing/index.html" aria-current="true" lang="ar" hreflang="ar" title="العربية">ع</a>
+        </div>
+        <a href="../../ar/index.html">الرئيسية</a>
+        <a href="../../ar/services/index.html">الخدمات</a>
+        <a href="../../ar/industries/index.html">القطاعات</a>
+        <a href="../../ar/process/index.html">مسار التعاون</a>
+        <a href="../../ar/financing/index.html">التمويل الحديث</a>
+        <a href="../../ar/about/index.html">من نحن</a>
+        <a href="../../ar/faq/index.html">الأسئلة الشائعة</a>
+        <a href="../../ar/contact/index.html">اتصل بنا</a>
+        <a class="btn btn-accent" href="../../ar/project-request/index.html">تقديم مشروع</a>
+      </nav>
+    </header>
+
+    
+
+    <main id="main">
+<section class="page-hero">
+  <div class="container">
+    <ol class="breadcrumbs">
+      <li><a href="../../ar/index.html">الرئيسية</a></li>
+      <li>التمويل الحديث</li>
+    </ol>
+    <p class="eyebrow">التمويل الحديث</p>
+    <h1>هيكل التمويل وترميز المصالح الاقتصادية</h1>
+    <p class="lead">
+      توضح هذه الصفحة كيف يتشكل هيكل التمويل ودور المستندات والظروف والحدود التي قد يستحق عندها دراسة ترميز المصالح الاقتصادية.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split split--wide-start">
+    <div class="prose reveal">
+      <h2>الحاجة التمويلية ليست هيكل تمويل</h2>
+      <p>
+        "كم رأس المال المطلوب؟" ليس السؤال الوحيد. والأهم: في أي مراحل وبأي تسلسل يُحتاج، ومن أي تدفق نقدي يُتوقع السداد، ومن يحمل مخاطر كل مرحلة.
+      </p>
+      <p>
+        هيكل التمويل مزيج من الأدوات والالتزامات والشروط المتوافقة مع مرحلة المشروع وطبيعة أصله وقدرته على السداد. واختيار الهيكل قبل توضيح ذلك قرار متسرع.
+      </p>
+
+      <h2>دور المستندات</h2>
+      <p>
+        دراسة الجدوى وافتراضات الإيراد والتكلفة وحالة التراخيص وهيكل الملكية هي أساس أي تقييم جدي. وغيابها لا يمنع البدء لكنه يحد من عمق التحليل وموثوقية النتائج.
+      </p>
+
+      <h2>الهياكل التعاقدية والمصالح الاقتصادية</h2>
+      <p>
+        تحتوي مشاريع كثيرة على تدفقات اقتصادية قابلة للتحديد: إيرادات بيع الطاقة أو حقوق التشغيل أو حصة من عائد أصل أو منافع عقد طويل الأجل. وقبل أي خطوة يجب توضيح كيف تُعرَّف هذه المصلحة وتُقاس وتُنقل وكيف تُحل المنازعات.
+      </p>
+    </div>
+
+    <aside class="panel panel--sand reveal">
+      <h3>نظرة سريعة</h3>
+      <ul class="check-list">
+        <li>الترميز أداة محتملة وليس هدف المشروع.</li>
+        <li>لا يمكن تنفيذه دون إطار قانوني واضح.</li>
+        <li>يتطلب جدوى فنية ومالية ومحاسبية وتنظيمية.</li>
+        <li>لا يُنشئ قيمة جديدة ولا يضمن السيولة.</li>
+        <li>لا يناسب كل المشاريع.</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section class="section section--sand">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">المفهوم</p>
+      <h2>ماذا يعني ترميز المصالح الاقتصادية</h2>
+      <p class="lead">
+        في هذا الإطار، "الرمز" مجرد وسيلة لتسجيل ونقل الحقوق والالتزامات المرتبطة بمصلحة اقتصادية. وتستند صحته إلى الدعم القانوني والتعاقدي والتشغيلي لتلك المصلحة، لا إلى التقنية وحدها.
+      </p>
+    </div>
+
+    <div class="flow" style="max-width:760px">
+      <div class="flow-step"><div><strong>مصلحة اقتصادية قابلة للتحديد</strong></div></div>
+      <div class="flow-step"><div><strong>هيكل قانوني وتعاقدي واضح</strong></div></div>
+      <div class="flow-step"><div><strong>نظام تسجيل وقياس وتسوية</strong></div></div>
+      <div class="flow-step"><div><strong>الامتثال للمتطلبات التنظيمية</strong></div></div>
+      <div class="flow-step"><div><strong>إدارة المخاطر وحل النزاعات</strong></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split">
+    <div class="reveal">
+      <h2>متى قد يستحق الدراسة؟</h2>
+      <ul class="check-list">
+        <li>وجود تدفق اقتصادي واضح وقابل للقياس.</li>
+        <li>إمكانية تحديد الحقوق والالتزامات وقيود النقل بدقة.</li>
+        <li>وجود مسار محاسبي وإبلاغ وتسوية قابل للتنفيذ.</li>
+        <li>وضوح الإطار التنظيمي الحاكم للإصدار والنقل.</li>
+        <li>ملاءمة الهيكل لمرحلة المشروع وقدرة الفريق التنفيذية.</li>
+      </ul>
+    </div>
+    <div class="panel panel--ink reveal">
+      <h2 class="h3" style="font-size:var(--step-1)">حدود واضحة</h2>
+      <ul class="check-list" style="color:#c9d6e0">
+        <li>لا يُنشئ الترميز بذاته قيمة اقتصادية جديدة.</li>
+        <li>لا يضمن السيولة ولا وجود مشترين.</li>
+        <li>لا يمكن تنفيذه دون التراخيص والإطار القانوني اللازمين.</li>
+        <li>ليس بديلاً عن الدراسة الاقتصادية والجدوى.</li>
+      </ul>
+      <p class="small" style="margin-top:1rem">
+        تتطلب أي دراسة في هذا المجال مراجعة قانونية مستقلة والامتثال لأنظمة بلد تنفيذ المشروع قبل أي خطوة تنفيذية.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--sand">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">حدود الخدمة</p>
+      <h2>دور دايا التقنية ودور الشركاء المتخصصين</h2>
+    </div>
+    <div class="grid grid--3">
+      <div class="card">
+        <h3>دايا التقنية</h3>
+        <p>التقييم الأولي والتحليل الاقتصادي والمالي وتصميم هيكل التمويل المقترح وتنسيق الخدمات المرتبطة.</p>
+      </div>
+      <div class="card">
+        <h3>Daya Block وبنى المجموعة</h3>
+        <p>عند ملاءمة المشروع، قد تسهم في دراسة حلول الترميز والبنية الرقمية المرتبطة.</p>
+      </div>
+      <div class="card">
+        <h3>الشركاء المتخصصون</h3>
+        <p>الخدمات القانونية والتدقيق والتقييم الرسمي والتراخيص والتقييم الفني التي تتطلب تأهيلاً أو ترخيصاً مستقلاً.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container cta-inner">
+    <div>
+      <h2>هل يمكن دراسة الترميز لمشروعك؟</h2>
+      <p>لا يمكن الإجابة إلا بعد مراجعة معلومات المشروع وهيكله القانوني وظروف تنفيذه.</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn-accent" href="../../ar/project-request/index.html">تقديم مشروع</a>
+    </div>
+  </div>
+</section>
+</main>
+
+    <footer class="site-footer">
+      <div class="container footer-main">
+        <div class="footer-brand">
+          <a class="brand" href="../../ar/index.html">
+            <img class="brand-mark" src="../../static/img/brand-mark.svg" alt="" width="38" height="38" />
+            <span class="brand-text">
+              <span class="brand-name">دايا التقنية</span>
+              <span class="brand-tag">استشارات تمويل المشاريع</span>
+            </span>
+          </a>
+          <p>
+            دراسة الفرص الصناعية وتحليل الجدوى الاقتصادية وتصميم هيكل تمويل يناسب كل مشروع.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3>روابط سريعة</h3>
+          <ul>
+            <li><a href="../../ar/about/index.html">من نحن</a></li>
+            <li><a href="../../ar/services/index.html">الخدمات</a></li>
+            <li><a href="../../ar/industries/index.html">القطاعات</a></li>
+            <li><a href="../../ar/process/index.html">مسار التعاون</a></li>
+            <li><a href="../../ar/financing/index.html">التمويل الحديث</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>المعلومات القانونية</h3>
+          <ul>
+            <li><a href="../../ar/legal/privacy/index.html">سياسة الخصوصية</a></li>
+            <li><a href="../../ar/legal/terms/index.html">شروط الاستخدام</a></li>
+            <li><a href="../../ar/legal/disclaimer/index.html">حدود الخدمات</a></li>
+            <li><a href="../../ar/project-request/index.html">تقديم مشروع</a></li>
+            <li><a href="../../ar/contact/index.html">اتصل بنا</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-contact">
+          <h3>بيانات الاتصال</h3>
+          <dl>
+            <dt>الهاتف</dt>
+            <dd><span class="muted">قيد الاستكمال</span></dd>
+            <dt>البريد الإلكتروني</dt>
+            <dd><span class="muted">قيد الاستكمال</span></dd>
+            <dt>العنوان</dt>
+            <dd><span class="muted">قيد الاستكمال</span></dd>
+          </dl>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>&copy; 2026 دايا التقنية — جميع الحقوق محفوظة.</p>
+        <p>يصف هذا الموقع خدماتنا فقط ولا يُنشئ أي التزام بالتمويل.</p>
+      </div>
+    </footer>
+
+    <script src="../../static/js/site.js?v=20261024" defer></script>
+    <script src="../../static/js/demo.js" defer></script>
+    
+  </body>
+</html>

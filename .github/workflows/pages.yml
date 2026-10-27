@@ -1,0 +1,69 @@
+# Publishes the standalone Daya Technical frontend copy to GitHub Pages.
+#
+# This workflow does not build anything: the site is already static HTML, so it
+# only collects the files the browser needs and hands them to GitHub Pages.
+# No Python, Django or Node.js is installed or executed.
+#
+# Published output: index.html, 404.html, .nojekyll, fa/, en/, ar/, static/
+# Never published:    README.md, serve.py, .gitignore, this workflow
+#
+# One-time setup in the repository: Settings -> Pages -> Build and deployment
+# -> Source: "GitHub Actions".
+
+name: Deploy static site to GitHub Pages
+
+on:
+  push:
+    # The default branch of the repository. Both names are listed so the first
+    # push works whether the repository was created with `main` or `master`.
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+# Read-only by default; the deploy job asks for the two extra permissions it needs.
+permissions:
+  contents: read
+
+# One deployment at a time. In-progress production deployments are allowed to finish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Stage the public files
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Collect only the files the site needs
+        run: |
+          set -euo pipefail
+          mkdir -p _site
+          cp -R index.html 404.html .nojekyll fa en ar static _site/
+          echo "Staged $(find _site -type f | wc -l) files"
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
